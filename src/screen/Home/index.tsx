@@ -17,7 +17,7 @@ const tasksInitialData = {
 };
 
 export function Home() {
-  const [tasks, setTasks] = useState<ITask[]>([tasksInitialData]);
+  const [tasks, setTasks] = useState<ITask[]>([]);
   const [fontsLoaded] = useFonts({
     Inter_900Black,
   });
