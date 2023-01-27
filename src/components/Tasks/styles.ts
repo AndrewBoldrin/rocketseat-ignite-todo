@@ -1,26 +1,21 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  emptyTaskContainer: {
-    justifyContent: "center",
+  taskListContainer: {
+    marginTop: 32,
+  },
+  taskList: {
+    backgroundColor: "#262626",
+    flexDirection: "row",
     alignItems: "center",
-    marginTop: 20,
-    height: 250,
-    borderTopWidth: 0.5,
-    borderTopColor: "#808080",
+    maxHeight: 64,
+    marginBottom: 8,
+    borderRadius: 8,
+    paddingVertical: 20,
   },
-  emptyIcon: {
-    width: 56,
-    height: 56,
-  },
-  noTaskText: {
-    color: "#808080",
-    fontSize: 16,
-    fontWeight: "bold",
-    marginTop: 16,
-  },
-  createTaskText: {
-    color: "#808080",
-    fontSize: 16,
+  taskDescriptionText: {
+    flex: 1,
+    color: "#F2F2F2",
+    marginHorizontal: 8,
   },
 });

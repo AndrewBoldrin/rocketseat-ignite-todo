@@ -9,6 +9,7 @@ import { Tasks } from "../../components/Tasks";
 export interface ITask {
   description: string;
   isDone: boolean;
+  id: number;
 }
 
 const tasksInitialData = {
@@ -25,8 +26,16 @@ export function Home() {
   if (!fontsLoaded) return null;
 
   function handleOnAdd(text: string) {
-    const newTask = { ...tasksInitialData, description: text };
+    const newTask = { ...tasksInitialData, description: text, id: Date.now() };
     setTasks([...tasks, newTask]);
+  }
+
+  function handleToggleFinished(taskId: number) {
+    const updatedTasks = tasks.map((task: ITask, index: number) => {
+      if (taskId === task.id) return { ...task, isDone: !task.isDone };
+      return task;
+    });
+    setTasks(updatedTasks);
   }
 
   return (
@@ -34,7 +43,7 @@ export function Home() {
       <View style={styles.headerBackground}></View>
       <Logo />
       <InputTask onTaskAdd={handleOnAdd} />
-      <Tasks tasks={tasks} />
+      <Tasks tasks={tasks} onToggleFinished={handleToggleFinished} />
     </View>
   );
 }

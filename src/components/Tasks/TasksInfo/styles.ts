@@ -12,12 +12,12 @@ export const styles = StyleSheet.create({
   new: {
     fontFamily: "Inter_900Black",
     marginRight: 5,
-    fontSize: 16,
+    fontSize: 14,
     color: "#4EA8DE",
   },
   newCount: {
     fontFamily: "Inter_900Black",
-    fontSize: 16,
+    fontSize: 14,
     paddingHorizontal: 9,
     borderRadius: 15,
     color: "white",
@@ -29,12 +29,12 @@ export const styles = StyleSheet.create({
   finished: {
     fontFamily: "Inter_900Black",
     marginRight: 5,
-    fontSize: 16,
+    fontSize: 14,
     color: "#8284FA",
   },
   finishedCount: {
     fontFamily: "Inter_900Black",
-    fontSize: 16,
+    fontSize: 14,
     paddingHorizontal: 9,
     borderRadius: 15,
     color: "#D9D9D9",
