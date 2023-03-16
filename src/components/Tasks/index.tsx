@@ -9,9 +9,10 @@ import { TasksInfo } from "./TasksInfo";
 type Props = {
   tasks: ITask[];
   onToggleFinished: (id: number) => void;
+  onRemoveTask: (id: number) => void;
 };
 
-export function Tasks({ tasks, onToggleFinished }: Props) {
+export function Tasks({ tasks, onToggleFinished, onRemoveTask }: Props) {
   const newCount = tasks.length;
   const finishedCount = tasks.filter((task) => task.isDone).length;
 
@@ -39,7 +40,10 @@ export function Tasks({ tasks, onToggleFinished }: Props) {
                 {task.description}
               </Text>
 
-              <TouchableOpacity style={{ marginRight: 8 }}>
+              <TouchableOpacity
+                style={{ marginRight: 8 }}
+                onPress={() => onRemoveTask(task.id)}
+              >
                 <Trash />
               </TouchableOpacity>
             </View>

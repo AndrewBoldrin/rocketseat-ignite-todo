@@ -38,12 +38,21 @@ export function Home() {
     setTasks(updatedTasks);
   }
 
+  function handleRemoveTask(taskId: number) {
+    const updatedTasks = tasks.filter((task) => task.id !== taskId);
+    setTasks(updatedTasks);
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.headerBackground}></View>
       <Logo />
       <InputTask onTaskAdd={handleOnAdd} />
-      <Tasks tasks={tasks} onToggleFinished={handleToggleFinished} />
+      <Tasks
+        tasks={tasks}
+        onToggleFinished={handleToggleFinished}
+        onRemoveTask={handleRemoveTask}
+      />
     </View>
   );
 }
