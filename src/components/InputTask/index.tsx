@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TextInput, TouchableOpacity, View } from "react-native";
+import { Alert, TextInput, TouchableOpacity, View } from "react-native";
 import { Add } from "../../assets/Icons/Add";
 import { styles } from "./styles";
 
@@ -7,7 +7,11 @@ export function InputTask({ onTaskAdd }: any) {
   const [taskDescription, setTaskDescription] = useState("");
 
   function handleTaskAdd() {
-    onTaskAdd(taskDescription);
+    if (taskDescription.trim() === "")
+      Alert.alert("Input", "Preencha com o nome da tarefa.");
+    else {
+      onTaskAdd(taskDescription);
+    }
     setTaskDescription("");
   }
 
