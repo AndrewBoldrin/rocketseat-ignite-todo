@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity } from "react-native";
-import { CheckBox } from "../../../assets/Icons/CheckBox";
-import { Trash } from "../../../assets/Icons/Trash";
+import { CheckBox } from "../../assets/Icons/CheckBox";
+import { Trash } from "../../assets/Icons/Trash";
 import { ITask } from "../../screen/Home";
 import { EmptyTaskContainer } from "./EmptyTaskContainer";
 import { styles } from "./styles";

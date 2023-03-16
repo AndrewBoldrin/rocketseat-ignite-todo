@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { TextInput, TouchableOpacity, View } from "react-native";
-import { Add } from "../../../assets/Icons/Add";
+import { Add } from "../../assets/Icons/Add";
 import { styles } from "./styles";
 
 export function InputTask({ onTaskAdd }: any) {
